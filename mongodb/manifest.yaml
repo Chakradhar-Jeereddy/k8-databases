@@ -54,12 +54,12 @@ spec:
       - name: mongodb
         image: chakradhar05/mongodb:v1
         volumeMounts:
-        - name: momgodb
+        - name: mongodb
           mountPath: /data/db
 #This is PVC, it is mandatory for statefulset. Creates on disk for each pod.
   volumeClaimTemplates:
   - metadata:
-      name: mogodb
+      name: mongodb
     spec:
       accessModes: [ "ReadWriteOnce" ]
       storageClassName: "roboshop-ebs"
